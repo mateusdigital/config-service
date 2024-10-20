@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2016",                              /* Set JavaScript language version for emitted JS. */
+    "module": "Node16",                              /* Use Node.js module system. */
+    "moduleResolution": "Node16",                    /* Resolve modules based on Node.js. */
+    "outDir": "./dist",                              /* Output directory for compiled JavaScript files. */
+    "resolveJsonModule": true,                       /* Enable importing .json files. */
+    "esModuleInterop": true,                         /* Interoperability between CommonJS and ES modules. */
+    "forceConsistentCasingInFileNames": true,        /* Enforce consistent case in file names. */
+    "strict": true,                                  /* Enable strict type-checking. */
+    "skipLibCheck": true                             /* Skip type checking of .d.ts files. */
+  },
+  "include": [
+    "source/**/*.ts"                                    /* Include all TypeScript files in the 'src' folder. */
+  ],
+  "exclude": [
+    "node_modules"                                   /* Exclude the 'node_modules' folder. */
+  ]
+}
