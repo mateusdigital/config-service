@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------
 import { Request, Response } from "express";
 // -----------------------------------------------------------------------------
-import ResponseStatus from "../../lib/libjoe/source/Response/ResponseStatus";
+import ResponseStatus from "../../lib/libjoe/source/Net/Request/ResponseStatus";
 import { Error_BusinessLogic, Error_ItemNotFound } from "../../lib/libjoe/source/Exception/Exceptions";
 import ConfigModel from "../model/ConfigModel";
 import { model } from "mongoose";
@@ -37,7 +37,7 @@ export class ConfigController
     try {
       const content = req.body.content;
       if(!content) {
-        throw new Error_BusinessLogic("Missing config content");
+        throw new Error_BusinessLogic("Missing config content", null);
       }
 
       const current_version = await ConfigModel.countDocuments();
